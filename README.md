@@ -3,7 +3,7 @@
 ## Table of contents
 - [General info](#general-info)
 - [Using the application](#using-the-application)
-- [Technologies Used](#technologies)
+- [Technologies Used](#technologies-used)
 
 
 ## General Info
