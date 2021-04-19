@@ -24,7 +24,6 @@ public class AddFareDetailsSubmit extends HttpServlet {
 		RequestDispatcher rd;
 		HttpSession session = request.getSession(false);
 		String flightNumber = request.getParameter("flightnumber");
-		System.out.println(flightNumber);
 		if(flightNumber == null) {
 			request.setAttribute("ERROR", "Cannot add Fare details");
 			rd = getServletContext().getRequestDispatcher("/admindetails.jsp");

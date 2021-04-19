@@ -345,7 +345,6 @@ public class CustomerDAO {
 		List<Flight> flightList = new ArrayList<Flight>();
 		SimpleDateFormat sdf = new SimpleDateFormat("E");
 		String day = sdf.format(travelDate);
-		System.out.println(day);
 
 		String sql = "select f.flight_number , f.airline , f.weekdays , f.src_airport_code , "
 				+ " f.dest_airport_code from flight f  where"

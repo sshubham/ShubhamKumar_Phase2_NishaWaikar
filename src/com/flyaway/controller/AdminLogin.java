@@ -22,7 +22,6 @@ public class AdminLogin extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	@SuppressWarnings("null")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String email = request.getParameter("emailaddress");
@@ -32,8 +31,8 @@ public class AdminLogin extends HttpServlet {
 		
 		AdminDAO admin = new AdminDAO();
 		
-		if((email != null || email.trim() != "") && 
-				(password != null || password.trim() != "")) {
+		if((email != null && email.trim() != "") && 
+				(password != null && password.trim() != "")) {
 			
 			
 			int adminId = admin.adminLogin(email, password);

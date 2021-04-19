@@ -26,7 +26,7 @@ public class Login extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	@SuppressWarnings("null")
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
@@ -35,9 +35,8 @@ public class Login extends HttpServlet {
 
 		RequestDispatcher rd;
 		CustomerDAO cust = new CustomerDAO();
-		if((email != null || email.trim() != "") && (password != null || password.trim() != "")) {
+		if((email != null && email.trim() != "") && (password != null && password.trim() != "")) {
 			int customerId = cust.customerLogin(email, password);
-			//System.out.println(customerId);
 			if(customerId != 0) {
 
 				HashMap<String, Object> map = new HashMap<String, Object>();

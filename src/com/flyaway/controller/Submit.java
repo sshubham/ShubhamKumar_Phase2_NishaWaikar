@@ -35,7 +35,6 @@ public class Submit extends HttpServlet {
 		session.setAttribute("fareobject", fare);
 		
 		Integer customerId = (Integer)session.getAttribute("customerId");
-		System.out.println("::::::" + customerId);
 		
 		if(customerId == null) {
 		rd = getServletContext().getRequestDispatcher("/register.jsp");

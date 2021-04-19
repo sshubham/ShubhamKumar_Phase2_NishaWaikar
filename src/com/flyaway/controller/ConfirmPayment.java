@@ -25,7 +25,7 @@ public class ConfirmPayment extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	@SuppressWarnings({ "null", "unused" })
+	@SuppressWarnings("unused")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		HttpSession session = request.getSession(false);
@@ -33,7 +33,7 @@ public class ConfirmPayment extends HttpServlet {
 		String cardNo = request.getParameter("cardno");
 		String date = request.getParameter("paymentdate");
 
-		if(session != null && (cardName != null || cardName.trim() != "") && (cardNo != null || cardNo.trim() != "" )
+		if(session != null && (cardName != null && cardName.trim() != "") && (cardNo != null && cardNo.trim() != "" )
 				&& date != null) {
 
 			session.setAttribute("cardname", cardName);
